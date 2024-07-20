@@ -1,0 +1,11 @@
+<div>
+  <input #msgUsr type="text" placeholder="user" (input)="user = $event || ''"/>
+  <br />
+  <input #msgTxt type="text" placeholder="Send a message" />
+  <button (click)="sendMessage(msgTxt.value)">Send</button>
+</div>
+
+<div>
+  <h3>WebSocket Messages</h3>
+  <pre>{{ websocketMessages | json }}</pre>
+</div>
